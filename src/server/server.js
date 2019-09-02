@@ -11,7 +11,7 @@ app.use(cors());
 
 var path = require('path');
 
-var auth = require('./routes/api/auth')(app, path);
+// var auth = require('./routes/api/auth')(app, path);
 var group = require('./api/group')(app, path);
 var user = require('./api/user')(app, path);
 

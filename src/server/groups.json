@@ -1,1 +1,1 @@
-[{ "ofGroupAdminsRole": true }, { "username": "user1", "email": "user1email", "groupList": [], "adminGroupList": [], "ofGroupAdminsRole": false }, { "username": "user3", "email": "user3email", "groupList": [], "adminGroupList": [], "ofGroupAdminsRole": false }]
+[{"id":1,"name":"G1"},{"name":"qwqq","id":4},{"name":"asdfadf","id":5}]

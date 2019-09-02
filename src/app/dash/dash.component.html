@@ -1,41 +1,3 @@
-<!-- <div class="container">
-    <form action="action_page.php">
-
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-        <label for="country">Country</label>
-        <select id="country" name="country">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
-      </select>
-
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-        <input type="submit" value="Submit">
-
-    </form>
-</div> -->
-
-<!-- <table>
-    <thead>
-        <th>Group ID</th>
-        <th>Group Name</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let group of groups">
-            <td>{{group.id}}</td>
-            <td>{{group.name}}</td>
-        </tr>
-    </tbody>
-</table>
-<br/> -->
-
 <div class="column">
     <h2>My Groups</h2>
     <ul class="groups">
@@ -72,7 +34,7 @@
       <input [(ngModel)]="selectedGroup.name" placeholder="name"/> -->
         <h3>Add User</h3>
         <form>
-            <input type="text" name="add-user" placeholder="New user">
+            <input type="text" name="add-user" [(ngModel)]="user" placeholder="New user">
             <!-- <button class="btn btn-lg btn-primary btn-block" (click)="addGroup()" type="submit">Add</button> -->
             <button (click)="addUserIntoGroup()" type="submit">Add user into group</button>
             <!-- <input type="submit" (click)="addGroup()" value="Add"> -->

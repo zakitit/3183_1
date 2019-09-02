@@ -46,7 +46,7 @@ export class DashComponent implements OnInit {
   //   { id: 4, name: "policy004" },
   //   { id: 5, name: "policy005" },
   // ];
-
+user;
   groups ; 
   group;
   // = [
@@ -89,10 +89,9 @@ export class DashComponent implements OnInit {
     // this.groups.push({ id: 33, name: "33" });
 
     const group ={
-      id: this.groups.length,
       name: this.group
     }
-    this.http.post(`${this.uri}/api/addgroup`, group).subscribe(
+    this.http.post(`${this.uri}/api/groups`, group).subscribe(
       data => {
         // this.vvv = data; 
         console.log(data);
@@ -107,25 +106,14 @@ export class DashComponent implements OnInit {
   }
 
   deleteGroup(group1: Group): void {
-    console.log('afda');
-    // // this.groups.pop();
-    // for (var i = 0; i < this.groups.length; i++) {
-    //   if (this.groups[i].name === group.name) {
-    //     this.groups.splice(i, 1);
-    //   }
-    // }
 
-    // const group ={
-    //   id: this.groups.length,
-    //   name: this.group
-    // }
-    // this.http.delete<Group>(`${this.uri}/api/deletegroup`, this.httpOptions).subscribe(
-    //   data => {
-    //     // this.vvv = data; 
-    //     console.log(data);
-    //     this.getGroups();
-    //     // this.groups =data;//JSON.parse(data);       
-    //   });
+    this.http.delete<Group>(`${this.uri}/api/groups/${group1.id}`, this.httpOptions).subscribe(
+      data => {
+        // this.vvv = data; 
+        console.log(data);
+        this.getGroups();
+   
+      });
   }
 
   getUsers(){
@@ -139,7 +127,17 @@ export class DashComponent implements OnInit {
   }
 
   addUser() {
-    // this.users.push({ id: 5, name: "u1" });
+    
+    const group ={
+      username: this.user
+    }
+    this.http.post(`${this.uri}/api/users`, group).subscribe(
+      data => {
+        // this.vvv = data; 
+        console.log(data);
+        this.getUsers();
+        // this.groups =data;//JSON.parse(data);       
+      });
   }
 
   addUserIntoGroup() {
