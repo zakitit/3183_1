@@ -1,0 +1,105 @@
+<!-- <div class="container">
+    <form action="action_page.php">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div> -->
+
+<!-- <table>
+    <thead>
+        <th>Group ID</th>
+        <th>Group Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let group of groups">
+            <td>{{group.id}}</td>
+            <td>{{group.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<br/> -->
+
+<div class="column">
+    <h2>My Groups</h2>
+    <ul class="groups">
+        <li *ngFor="let group of groups" [class.selected]="group === selectedGroup" (click)="onSelect(group)">
+            <span class="badge">{{group.id}}</span> {{group.name}}
+            <button class="delete" title="delete group" (click)="deleteGroup(group)">x</button>
+        </li>
+
+    </ul>
+
+    <h3>Add Group</h3>
+    <form>
+        <input type="text" name="group" [(ngModel)]="group" placeholder="New Group">
+        <!-- <button class="btn btn-lg btn-primary btn-block" (click)="addGroup()" type="submit">Add</button> -->
+        <button (click)="addGroup()" type="submit">Add</button>
+        <!-- <input type="submit" (click)="addGroup()" value="Add"> -->
+    </form>
+</div>
+
+<div class="column">
+    <div *ngIf="selectedGroup">
+        <h2>{{selectedGroup.name | uppercase}}</h2>
+        <ul class="groups">
+            <li *ngFor="let user of group_users.group1">
+                <span class="badge">{{user.id}}</span> {{user.name}}
+                <button class="delete" title="delete group_user" (click)="deleteGU(user)">x</button>
+            </li>
+        </ul>
+
+        <!-- <h2>{{selectedGroup.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{selectedGroup.id}}</div>
+        <div>
+            <label>name:
+      <input [(ngModel)]="selectedGroup.name" placeholder="name"/> -->
+        <h3>Add User</h3>
+        <form>
+            <input type="text" name="add-user" placeholder="New user">
+            <!-- <button class="btn btn-lg btn-primary btn-block" (click)="addGroup()" type="submit">Add</button> -->
+            <button (click)="addUserIntoGroup()" type="submit">Add user into group</button>
+            <!-- <input type="submit" (click)="addGroup()" value="Add"> -->
+        </form>
+    </div>
+
+</div>
+
+<div class="column">
+    <h2>All the users</h2>
+    <ul class="groups">
+        <li *ngFor="let user of users">
+            <span class="badge">{{user.email}}</span> {{user.username}}
+            <button class="delete" title="delete user" (click)="deleteUser(user)">x</button>
+        </li>
+    </ul>
+
+    <!-- <h2>{{selectedGroup.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{selectedGroup.id}}</div>
+        <div>
+            <label>name:
+      <input [(ngModel)]="selectedGroup.name" placeholder="name"/> -->
+    <h3>Add User</h3>
+    <form>
+        <input type="text" name="add-user" placeholder="New user">
+        <!-- <button class="btn btn-lg btn-primary btn-block" (click)="addGroup()" type="submit">Add</button> -->
+        <button (click)="addUser()" type="submit">Add user</button>
+        <!-- <input type="submit" (click)="addGroup()" value="Add"> -->
+    </form>
+</div>

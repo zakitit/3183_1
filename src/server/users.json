@@ -1,0 +1,5 @@
+[{ "username": "super", "email": "superemail", "groupList": [], "adminGroupList": [], "ofGroupAdminsRole": true },
+    { "username": "user1", "email": "user1email", "groupList": [], "adminGroupList": [], "ofGroupAdminsRole": false },
+    { "username": "user3", "email": "user3email", "groupList": [], "adminGroupList": [], "ofGroupAdminsRole": false },
+    { "username": "swe", "email": "superemail", "groupList": ["er", "tt"], "adminGroupList": ["kk"], "ofGroupAdminsRole": true }
+]
