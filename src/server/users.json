@@ -1,1 +1,1 @@
-[{"id":1,"name":"G1"},{"id":2,"name":"G2"},{"id":3,"name":"G3"},{"name":"qwqq","id":4},{}]
+[{"username":"super","email":"superemail","groupList":[],"adminGroupList":[],"ofGroupAdminsRole":true},{"username":"user1","email":"user1email","groupList":[],"adminGroupList":[],"ofGroupAdminsRole":false},{"username":"user3","email":"user3email","groupList":[],"adminGroupList":[],"ofGroupAdminsRole":false},{"username":"swe","email":"superemail","groupList":["er","tt"],"adminGroupList":["kk"],"ofGroupAdminsRole":true},{}]

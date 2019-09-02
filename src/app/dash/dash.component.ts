@@ -46,8 +46,8 @@ export class DashComponent implements OnInit {
   //   { id: 4, name: "policy004" },
   //   { id: 5, name: "policy005" },
   // ];
-user;
-  groups ; 
+  user; 
+  groups; 
   group;
   // = [
   //   {  name: "policy001" },
@@ -98,9 +98,7 @@ user;
         this.getGroups();
         // this.groups =data;//JSON.parse(data);       
       },
-
       // error=>{
-
       // }
     );
   }
@@ -112,7 +110,6 @@ user;
         // this.vvv = data; 
         console.log(data);
         this.getGroups();
-   
       });
   }
 

@@ -44,7 +44,7 @@ module.exports = function(app, path) {
         // var jsonContent = JSON.stringify(returnedTarget);
 
         // console.log(jsonContent);
-        fs.readFile("groups.json", 'utf8', function(err, data) {
+        fs.readFile("users.json", 'utf8', function(err, data) {
             data = JSON.parse(data);
             // group.id = Math.max.apply(Math, data.map(function(o) { return o.id; })) + 1;
             console.log();
